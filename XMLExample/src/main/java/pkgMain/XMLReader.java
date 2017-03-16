@@ -12,6 +12,8 @@ import pkgLibrary.Catalog;
 
 public class XMLReader {
 
+	private static double price;
+
 	public static void main(String[] args) {
 
 		Catalog cat = null;
@@ -90,6 +92,13 @@ public class XMLReader {
 
 		return cat;
 
+	}
+	// 20% Sale price for book
+	public static Catalog salecost(Catalog cat, double c) {
+		for (Book b : cat.getBooks()) {
+			double newPrice = price * .80;
+		}
+		return cat;
 	}
 
 }

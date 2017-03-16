@@ -31,4 +31,6 @@
 	</xsd:element>
 
 
+
+    <xsd:attribute name="Cost" type="xsd:double"></xsd:attribute>
 </xsd:schema>

@@ -15,12 +15,14 @@ public class Book {
 	private double price;
 	private Date publish_date;
 	private String description;
+	// Added cost
+	private double cost;
 
 	public Book() {
 
 	}
 
-	public Book(String id, String author, String title, String genre, double price, Date publish_date, String description)
+	public Book(String id, String author, String title, String genre, double price, Date publish_date, String description, double cost)
 	{
 		super();
 		this.id = id;
@@ -30,6 +32,7 @@ public class Book {
 		this.price = price;
 		this.publish_date = publish_date;
 		this.description = description;
+		this.cost = cost;
 	}
 	
  
@@ -96,7 +99,17 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	@XmlElement
+	
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
 
+	// Added return, 20% lower than price for each book
+	public double getcost() {
+		return cost;
+	}
+	
 	
 	
 
